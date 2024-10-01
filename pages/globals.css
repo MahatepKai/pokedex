@@ -1,0 +1,21 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-family: 'Pokemon Classic' ;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+@font-face {
+    font-family: 'Pokemon Classic';
+    src: url('Pokemon-Classic.woff2') format('woff2'),
+        url('Pokemon-Classic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
