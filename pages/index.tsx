@@ -31,18 +31,16 @@ export default function Home() {
     }
   }, [cardsLoaded, pokemons.length]);
 
-  //const handleSearch = (search) => {
-  //  const filtered = pokemons.filter(pokemon => 
-  //    pokemon && ( 
-  //      pokemon.name.toLowerCase().includes(search.toLowerCase()) ||
-  //      (pokemon.id && pokemon.id.toString().includes(search))
-  ///    )
-  //  );
-    
-    //const sortedFiltered = filtered.sort((a, b) => a.id - b.id);
-  
-  //  setFilteredPokemons(sortedFiltered);
-  //};
+  const handleSearch = (search) => {
+    const filtered = pokemons.filter(pokemon =>
+      pokemon && (
+        (pokemon.id && pokemon.id.toString().includes(search))
+      )
+    );
+    const sortedFiltered = filtered.sort((a, b) => a.id - b.id);
+
+    setFilteredPokemons(sortedFiltered);
+  };
 
   return (
     <div>
@@ -55,7 +53,7 @@ export default function Home() {
       </div>
       <div className={styles.nav}>
         <Image src={logo} className={styles.logo} alt="logo" />
-        <Search pokemons={pokemons} onSearch={handleSearch}/>
+        <Search pokemons={pokemons} onSearch={handleSearch} />
 
       </div>
       <div className={styles.DEX}>
